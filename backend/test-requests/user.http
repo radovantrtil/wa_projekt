@@ -1,0 +1,50 @@
+### Login
+
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+  "login": "radovantrtil",
+  "password": "12345678"
+}
+
+### Register
+
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+  "login": "student",
+  "password": "Student2021",
+  "firstname": "Jiří",
+  "lastname": "Odvárka",
+  "user_type_id": 1
+}
+
+### Get info
+
+GET http://localhost:3000/user/info
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6InN0dWRlbnQyIiwiZmlyc3RuYW1lIjoiSmnFmcOtIiwibGFzdG5hbWUiOiJPZHbDoXJrYSIsInJvbGUiOjEsImlhdCI6MTY1NDc4NjQzN30.9azWaZZUf61ocxhrc__ucGK601JCVpMo4lxQt4wI7-c
+
+### Bad Login (wrong pass)
+
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+  "username": "student",
+  "password": "heslo1234"
+}
+
+### Bad Login (wrong username)
+
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+  "username": "xtrtil1",
+  "password": "heslo1234"
+}
+
+### Get all users
+GET http://localhost:3000/user

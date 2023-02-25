@@ -1,0 +1,57 @@
+### All reservations
+
+GET http://localhost:3000/reservations
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6InN0dWRlbnQiLCJpYXQiOjE2NTE4NjgzODl9.f7i4Uhdo2euqwPNDK71xrUkPBM2hFQLfHhMKhTIYjho
+
+### Fetch Existing reservation
+
+GET http://localhost:3000/reservations/1
+Accept: application/json
+
+### Fetch Nonexisting reservation
+
+GET http://localhost:3000/reservationss/33
+
+### Create New reservation
+
+POST http://localhost:3000/reservations
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6InJhZG92YW50cnRpbCIsImZpcnN0bmFtZSI6IlJhZG92YW4iLCJsYXN0bmFtZSI6IlRydGlsIiwicm9sZSI6MywiaWF0IjoxNjU0ODk2NTc1fQ.bkUW1GMuvz85WN9aFFVX2IWbBQ95nMmiGj9co-nsK04
+
+{
+  "flights_id": 9,
+  "users_id": 4,
+  "description": "here is some information"
+}
+
+### Update existing reservation
+
+PUT http://localhost:3000/flights/1
+Content-Type: application/json
+
+{
+  "flights_id": 3,
+  "users_id": 3,
+  "description": "here is some MODIFIED information"
+}
+
+### Update nonexisting reservation
+
+PUT http://localhost:3000/flightss/33
+Content-Type: application/json
+
+{
+  "flights_id": 12,
+  "users_id": 1,
+  "description": "here is some MODIFIED information"
+}
+
+### Delete Existing flight
+
+DELETE http://localhost:3000/reservations/6
+Accept: application/json
+
+
+
+
+

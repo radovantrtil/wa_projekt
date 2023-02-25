@@ -1,0 +1,64 @@
+### All flights
+
+GET http://localhost:3000/flights
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6InN0dWRlbnQiLCJpYXQiOjE2NTE4NjgzODl9.f7i4Uhdo2euqwPNDK71xrUkPBM2hFQLfHhMKhTIYjho
+
+### Fetch Existing flight
+
+GET http://localhost:3000/flights/1
+Accept: application/json
+
+### Fetch Nonexisting flight
+
+GET http://localhost:3000/flights/33
+
+### Create New Flight
+
+POST http://localhost:3000/flights
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6InJhZG92YW50cnRpbCIsImZpcnN0bmFtZSI6IlJhZG92YW4iLCJsYXN0bmFtZSI6IlRydGlsIiwicm9sZSI6MywiaWF0IjoxNjU0ODk2NTc1fQ.bkUW1GMuvz85WN9aFFVX2IWbBQ95nMmiGj9co-nsK04
+
+{
+  "title": "Tour to the Moon",
+  "datetime": "2023-02-19T19:00",
+  "capacity": 80,
+  "information": "here is some information"
+}
+
+### Update existing flights
+
+PUT http://localhost:3000/flights/11
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjozLCJsb2dpbiI6InJhZG92YW50cnRpbCIsImZpcnN0bmFtZSI6IlJhZG92YW4iLCJsYXN0bmFtZSI6IlRydGlsIiwicm9sZSI6MywiaWF0IjoxNjU2MjgyMjMxfQ.ltIiDjY1dbgoHgBBEkR19nnREM7MA8oOSVrAe4akbuY
+
+{
+  "title": "Tour to the Mars with Elon",
+  "datetime": "2024-12-29T10:00",
+  "capacity": 100,
+  "information": "here is some MODIFIED information"
+}
+
+### Update nonexisting flight
+
+PUT http://localhost:3000/flights/33
+Content-Type: application/json
+
+{
+  "title": "Tour to the Mars with Elon",
+  "datetime": "2024-12-29T10:00",
+  "capacity": 100,
+  "information": "here is some MODIFIED information"
+}
+
+### Delete Existing flight
+
+DELETE http://localhost:3000/flights/6
+Accept: application/json
+
+### Delete Nonexisting flight
+
+DELETE http://localhost:3000/flights/133
+Accept: application/json
+
+
+
